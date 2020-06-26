@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_26_174900) do
+ActiveRecord::Schema.define(version: 2020_06_26_191207) do
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
@@ -19,15 +19,13 @@ ActiveRecord::Schema.define(version: 2020_06_26_174900) do
     t.string "state"
     t.text "description"
     t.integer "price"
-    t.integer "par"
     t.integer "difficulty"
-    t.integer "length"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "holes", force: :cascade do |t|
-    t.integer "length"
+    t.integer "distance"
     t.integer "par_score"
     t.integer "course_id"
     t.boolean "water_hazard", default: false

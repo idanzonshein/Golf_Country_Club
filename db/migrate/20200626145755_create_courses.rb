@@ -7,7 +7,7 @@ class CreateCourses < ActiveRecord::Migration[6.0]
       t.string :state
       t.text :description
       t.integer :price
-      t.integer :par
+      t.integer :par_score
       t.integer :difficulty
       t.integer :length
 

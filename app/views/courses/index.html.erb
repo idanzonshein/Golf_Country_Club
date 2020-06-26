@@ -1,15 +1,13 @@
 <h1>Courses Home Page</h1>
 
-<h2>Below Find all Courses</h2>
+<h2>Below Find all Courses</h2><br>
 
 <% @courses.each do |course| %>
-  <h1> <%= @course.name %> </h1>
-  <p>Address: <%= @course.address %></p>
-  <p><%= @course.city %></p>
-  <p><%= @course.state %></p>
-  <p><%= @course.description %></p>
-  <p><%= @course.price %></p>
-  <p><%= @course.par %></p>
-  <p><%= @course.length %></p>
-  <p><%= @course.difficulty %></p>
+  <h1> <%= link_to course.name, course_path(course) %> </h1>
+  <p>Address: <%= course.address %></p>
+  <p>City: <%= course.city %></p>
+  <p>State: <%= course.state %></p>
+  <p>Description:<%= course.description %></p>
+  <p>Price: $<%= course.price %></p>
+  <p>Difficulty: <%= course.difficulty %></p>
 <% end %>

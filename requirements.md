@@ -4,10 +4,10 @@ Add notes below each checkbox with how your application has met the requirement
 
 Requirements:
 - [x] Uses Ruby on Rails
-- [ ] Includes at least one has_many relationship (e.g. User has_many Recipes)
-- [ ] Includes at least one belongs_to relationship (e.g. Post belongs_to User)
-- [ ] Includes at least two has_many through relationships (e.g. a `Recipe` could `has_many` `Item`s through `Ingredient`s)
-- [ ] Every model contains at least at least two simple attributes (e.g. ingredient#quantity)
+- [x] Includes at least one has_many relationship (e.g. User has_many Recipes)
+- [x] Includes at least one belongs_to relationship (e.g. Post belongs_to User)
+- [x] Includes at least two has_many through relationships (e.g. a `Recipe` could `has_many` `Item`s through `Ingredient`s)
+- [x] Every model contains at least at least two simple attributes (e.g. ingredient#quantity)
 - [ ] Includes reasonable validations
 - [ ] Includes a class level ActiveRecord scope method
 - [ ] Includes signup, login and logout functionality (e.g. Devise)
