@@ -1,7 +1,7 @@
 <h1><%= @course.name%><br></h1>
 ____________________________
 
-<% @course.holes.each do |hole| %>
+<% @course.holes.by_number.each do |hole| %>
   <p>Hole: <%= hole.hole_number %></p>
   <p>Distance: <%= hole.distance %> yards</p>
   <p>Par: <%= hole.par_score%></p>
