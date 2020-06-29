@@ -8,9 +8,16 @@
 <%= @course.description %><br><br>
 
 <strong>Price:</strong><br>
-$<%= @course.price %>
+$<%= @course.price %><br>
 
-<p><%= @course.difficulty %></p>
+<br>
+<strong>Difficulty:</strong><br>
+<%= @course.difficulty %></p>
+
+<strong>Number of Holes: </strong><br>
+<%= @hole.count %></p>
+
+
 <strong><%= link_to 'Holes', course_holes_path(@course) %></strong><br>
 <br>
 <br>

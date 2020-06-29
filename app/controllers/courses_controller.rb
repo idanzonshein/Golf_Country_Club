@@ -3,6 +3,7 @@ class CoursesController < ApplicationController
 
   def index
     @courses = Course.all
+    @hole = Hole.all
   end
 
   def new
@@ -16,6 +17,7 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
+    @hole = Hole.all
   end
 
 private

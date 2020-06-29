@@ -10,6 +10,7 @@
   <p>Description:<%= course.description %></p>
   <p>Price: $<%= course.price %></p>
   <p>Difficulty: <%= course.difficulty %></p>
-  <p> ADMIN: <%= link_to 'Add Holes', new_course_hole_path(course) %>
+  <p>Number of Holes: <%= @hole.count %></p>
+  <p>ADMIN: <%= link_to 'Add Holes', new_course_hole_path(course) %>
   <p> Click Here To See Course Holes: <%= link_to 'Holes', course_holes_path(course)%>
 <% end %>

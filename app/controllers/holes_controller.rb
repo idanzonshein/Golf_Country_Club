@@ -21,7 +21,7 @@ class HolesController < ApplicationController
 
 private
   def hole_params
-    params.require(:hole).permit(:distance, :par_score, :water_hazard)
+    params.require(:hole).permit(:hole_number,:distance, :par_score, :water_hazard)
   end
 
   def course

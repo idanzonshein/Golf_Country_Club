@@ -10,9 +10,9 @@ Requirements:
 - [x] Every model contains at least at least two simple attributes (e.g. ingredient#quantity)
 - [ ] Includes reasonable validations
 - [ ] Includes a class level ActiveRecord scope method
-- [ ] Includes signup, login and logout functionality (e.g. Devise)
-- [ ] Includes nested resource show or index (e.g. users/2/recipes)
-- [ ] Includes nested resource form (recipes/1/ingredients/new)
+- [x] Includes signup, login and logout functionality (e.g. Devise)
+- [x] Includes nested resource show or index (e.g. users/2/recipes)
+- [x] Includes nested resource form (recipes/1/ingredients/new)
 - [ ] Includes form display of validation errors
 - [ ] Includes Unit tests all of your models
 - [ ] Includes at least one type of Integration test (e.g. controller, request, feature, system)
@@ -24,6 +24,6 @@ Confirm:
 - [ ] The application is pretty DRY
 - [ ] Limited logic in controllers
 - [ ] Views use helper methods if appropriate
-- [ ] Views use partials if appropriate
+- [x] Views use partials if appropriate
 
 If you've added any additional functionality to your application that you'd like to demonstrate, please describe it below:
