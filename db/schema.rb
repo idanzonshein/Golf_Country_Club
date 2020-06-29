@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_26_191207) do
+ActiveRecord::Schema.define(version: 2020_06_29_131349) do
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_191207) do
     t.boolean "water_hazard", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "hole_number"
   end
 
   create_table "users", force: :cascade do |t|

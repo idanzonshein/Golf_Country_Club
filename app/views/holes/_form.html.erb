@@ -1,0 +1,16 @@
+
+<%= form_for [@course, @hole] do |f| %>
+  <%= f.label :hole_number %>
+  <%= f.text_field :hole_number %>
+  <br>
+  <%= f.label :distance %>
+  <%= f.text_field :distance %>
+  <br>
+  <%= f.label :par_score %>
+  <%= f.text_field :par_score %>
+  <br>
+  <%= f.label :water_hazard %>
+  <%= f.check_box :water_hazard %>
+
+  <%= f.submit 'Create Hole!' %>
+<% end %>
