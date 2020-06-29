@@ -4,4 +4,6 @@ class Hole < ApplicationRecord
   scope :by_number, -> { order(:hole_number) }
 
 
+
+
 end

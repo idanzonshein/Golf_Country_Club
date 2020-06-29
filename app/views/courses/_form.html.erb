@@ -15,10 +15,10 @@
   <%=f.text_area :description %>
   <br>
   <%=f.label :price %>:<br>
-  <%=f.text_field :price %>
-  <br>
+  <%=f.text_field :price %><br>
+
   <%=f.label :difficulty %>:<br>
-  <%=f.text_field :difficulty %>
+  <%=f.select(:difficulty, options_for_select(['Expert', 'Intermediate', 'Beginner'], 'Expert')) %><br>
   <br>
   <%= f.submit submit_text %>
 

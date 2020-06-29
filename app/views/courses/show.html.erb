@@ -18,10 +18,13 @@ $<%= @course.price %><br>
 <%= @course.holes.count %></p>
 
 <strong>Total Par: </strong><br>
-<%=@course.total_par %><br><br>
+<%= @course.total_par %><br><br>
+
+<strong>Total Distance: </strong><br>
+<%= @course.total_distance %> Yards</p>
 
 
-<strong><%= link_to 'Click Here To View Each Hole', course_holes_path(@course) %></strong><br>
+<strong><%= link_to 'Course Holes', course_holes_path(@course) %></strong><br>
 <br>
 <br>
 <br>
