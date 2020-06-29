@@ -16,7 +16,7 @@ class HolesController < ApplicationController
   def create
     @hole = @course.holes.create(hole_params)
     @hole.save
-    redirect_to course_hole_path(@course, @hole)
+    redirect_to course_path(@course)
   end
 
 private

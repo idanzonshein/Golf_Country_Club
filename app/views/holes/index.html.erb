@@ -1,10 +1,12 @@
-<%= @course.name%>
+<%= @course.name%><br>
+__________________
 
 <% @holes.each do |hole| %>
-  <p>Hole:<%= hole.hole_number %></p>
-  <p>Distance:<%= hole.distance %> yards</p>
-  <p>Par:<%= hole.par_score%></p>
+  <p>Hole: <%= hole.hole_number %></p>
+  <p>Distance: <%= hole.distance %> yards</p>
+  <p>Par: <%= hole.par_score%></p>
   <% if hole.water_hazard %>
-    <%= 'water_hazard: Yes' %>
+    <%= 'water_hazard: Yes' %><br><br>
   <% end %>
+  ____________________________
 <% end %>

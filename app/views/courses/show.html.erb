@@ -1,13 +1,19 @@
 <h1> <%= @course.name %> </h1>
-<p><%= @course.address %></p>
-<p><%= @course.city %></p>
-<p><%= @course.state %></p>
-<p><%= @course.description %></p>
-<p><%= @course.price %></p>
+
+<strong>Address:</strong><br>
+<%= @course.address %><br>
+<%= @course.city %>, <%= @course.state %><br><br>
+
+<strong>Description:</strong><br>
+<%= @course.description %><br><br>
+
+<strong>Price:</strong><br>
+$<%= @course.price %>
+
 <p><%= @course.difficulty %></p>
-<%= link_to 'Holes', course_holes_path(@course) %><br>
+<strong><%= link_to 'Holes', course_holes_path(@course) %></strong><br>
 <br>
 <br>
 <br>
 
-<%= link_to 'Back', courses_path %>
+<strong> <%= link_to 'Back', courses_path %> </strong>
