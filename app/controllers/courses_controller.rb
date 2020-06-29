@@ -1,9 +1,8 @@
 class CoursesController < ApplicationController
-
+  before_action :find_course, only: [:show, :edit, :update]
 
   def index
     @courses = Course.all
-    @hole = Hole.all
   end
 
   def new
@@ -15,23 +14,31 @@ class CoursesController < ApplicationController
     redirect_to course_path(@course)
   end
 
-  def show
-    @course = Course.find(params[:id])
-    @hole = Hole.all
+  def show; end
+
+  def edit; end
+
+  def update
+    @course.update(course_params)
+    redirect_to course_path(@course)
   end
 
 private
 
+  def find_course
+    @course = Course.find(params[:id])
+  end
+
   def course_params
     params.require(:course).permit(:name,
-                                  :address,
-                                  :city,
-                                  :state,
-                                  :description,
-                                  :price,
-                                  :par,
-                                  :difficulty,
-                                  :length
+                                   :address,
+                                   :city,
+                                   :state,
+                                   :description,
+                                   :price,
+                                   :par,
+                                   :difficulty,
+                                   :length
                                   )
   end
 end

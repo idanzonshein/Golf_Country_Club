@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  /* background-image: url(/assets/background.jpg); */
+  background-color: mediumseagreen;
+  color: white;
+  font-size: large;
+
+
+}

@@ -1,14 +1,16 @@
-<%= @course.name%><br>
-__________________
+<h1><%= @course.name%><br></h1>
+____________________________
 
-<% @holes.each do |hole| %>
+<% @course.holes.each do |hole| %>
   <p>Hole: <%= hole.hole_number %></p>
   <p>Distance: <%= hole.distance %> yards</p>
   <p>Par: <%= hole.par_score%></p>
   <% if hole.water_hazard %>
     <%= 'water_hazard: Yes' %><br><br>
   <% end %>
+  ADMIN: <%= link_to 'Edit Hole', edit_course_hole_path(@course, hole) %>
+  <%= link_to "Delete Hole", course_hole_path(@course, hole), method: :delete, data: {confirm: "Are you sure you want to delete this hole?"} %><br>
   ____________________________
 <% end %><br>
 
-<%= link_to "Back to Course", course_path(@course) %>
+<h2><%= link_to "Back to Course", course_path(@course) %></h2>
