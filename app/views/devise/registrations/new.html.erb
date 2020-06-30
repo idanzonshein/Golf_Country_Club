@@ -4,8 +4,23 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.tesxt_field :age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :skill_level %>:<br>
+    <%= f.select(:skill_level, options_for_select(['Expert', 'Intermediate', 'Beginner'], 'Expert')) %><br>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autocomplete: "email" %>
   </div>
 
   <div class="field">
