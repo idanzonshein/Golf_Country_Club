@@ -8,8 +8,13 @@ ____________________________
   <% if hole.water_hazard %>
     <%= 'water_hazard: Yes' %><br><br>
   <% end %>
-  ADMIN: <%= link_to 'Edit Hole', edit_course_hole_path(@course, hole) %>
-  <%= link_to "Delete Hole", course_hole_path(@course, hole), method: :delete, data: {confirm: "Are you sure you want to delete this hole?"} %><br>
+
+  <% if current_user.admin %>
+    <%= 'Admin:' %> <br>
+    <%= link_to 'Edit Hole', edit_course_hole_path(@course, hole) %>
+    <%= link_to "Delete Hole", course_hole_path(@course, hole), method: :delete, data: {confirm: "Are you sure you want to delete this hole?"} %><br>
+  <% end %>
+
   ____________________________
 <% end %><br>
 
