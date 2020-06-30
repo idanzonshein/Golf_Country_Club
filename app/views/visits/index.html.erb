@@ -1,0 +1,30 @@
+<h1>Visits Log at <%= @course.name %> </h1>
+
+<table>
+  <thead>
+    <tr>
+        <th>User</th>
+        <th>Date</th>
+        <th>Score</th>
+        <th>Conditions</th>
+        <th colspan= "4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @course.visits.each do |visit| %>
+      <tr>
+        <td><%= visit.user.name %></td>
+        <td><%= visit.date_time %></td>
+        <td><%= visit.score %></td>
+        <td><%= visit.conditions %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<%= link_to 'Log Your Visit', new_course_visit_path(@course) %>

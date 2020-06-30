@@ -3,24 +3,13 @@
 <h2>Below Find all Courses</h2><br>
 
 <% @courses.each do |course| %>
-  <h1> <%= link_to course.name, course_path(course) %> </h1>
-  <strong><p>Address:</strong><br>
-  <%= course.address %><br>
-  <%= course.city %>,
-  <%= course.state %></p>
+  <h1> <%= course.name %> </h1>
+
   <strong><p>Description:</strong><br>
   <%= course.description %></p>
-  <strong><p>Price: </strong> <br>
-  $<%= course.price %></p>
-  <strong><p>Difficulty: </strong><br>
-  <%= course.difficulty %></p>
-  <strong><p>Number of Holes: </strong><br>
-  <%= course.holes.count  %></p>
-  <strong><p>Par: </strong><br>
-  <%=course.total_par %></p>
-  <strong><p>Total Distance: </strong><br>
-  <%=course.total_distance %> Yards</p>
-  <strong><p><%= link_to 'Course Holes', course_holes_path(course)%></strong><br><br>
+
+  <strong><%= link_to 'Course Details', course_path(course)%></strong>
+  <strong><%= link_to 'Visits Log', course_visits_path(course)%></strong><br><br>
 
   <% if current_user.admin %>
     <%= 'Admin:' %> <br>

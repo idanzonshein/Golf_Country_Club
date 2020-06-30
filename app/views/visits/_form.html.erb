@@ -1,0 +1,12 @@
+<%= form_for [@course, @visit] do |f| %>
+  <%= f.label :date %>
+  <%= f.date_select :date_time %>
+  <br>
+  <%= f.label :score %>
+  <%= f.text_field :score %>
+  <br>
+  <%= f.label :conditions %>
+  <%=f.select(:conditions, options_for_select(['Excellent', 'Not Bad', 'Terrible'], 'Excellent')) %>
+  <br>
+  <%= f.submit submit_text %>
+<% end %>
