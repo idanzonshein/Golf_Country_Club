@@ -11,7 +11,6 @@ class CreateCourses < ActiveRecord::Migration[6.0]
       t.integer :difficulty
       t.integer :length
 
-
       t.timestamps
     end
   end

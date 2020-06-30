@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  before_action :find_course, only: [:show, :edit, :update]
+  before_action :find_course, only: %i[show edit update]
 
   def index
     @courses = Course.all
@@ -11,7 +11,7 @@ class CoursesController < ApplicationController
 
   def create
     @course = Course.create(course_params)
-    redirect_to course_path(@course)
+    redirect_to courses_path
   end
 
   def show; end
@@ -30,15 +30,16 @@ private
   end
 
   def course_params
-    params.require(:course).permit(:name,
-                                   :address,
-                                   :city,
-                                   :state,
-                                   :description,
-                                   :price,
-                                   :par,
-                                   :difficulty,
-                                   :length
-                                  )
+    params.require(:course).permit(
+      :name,
+      :address,
+      :city,
+      :state,
+      :description,
+      :price,
+      :par,
+      :difficulty,
+      :length
+    )
   end
 end

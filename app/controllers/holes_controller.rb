@@ -14,8 +14,7 @@ class HolesController < ApplicationController
   end
 
   def create
-    @hole = @course.holes.create(hole_params)
-    @hole.save
+    @course.holes.create(hole_params)
     redirect_to course_path(@course)
   end
 
@@ -24,7 +23,8 @@ class HolesController < ApplicationController
   end
 
   def update
-    @hole = @course.holes.update(hole_params)
+    @hole = Hole.find(params[:id])
+    @hole.update(hole_params)
     redirect_to course_holes_path(@course)
   end
 
