@@ -1,5 +1,7 @@
 <h1>Visits Log at <%= @course.name %> </h1>
 
+<h3><strong><%= link_to 'Log Your Visit', new_course_visit_path(@course) %></strong></h3>
+
 <table>
   <thead>
     <tr>
@@ -23,9 +25,4 @@
 </table>
 
 <br>
-<br>
-<br>
-<br>
-<h3><strong><%= link_to 'Log Your Visit', new_course_visit_path(@course) %></strong></h3><br><br>
-
 <%= link_to 'Return to Course', course_path(@course) %>
