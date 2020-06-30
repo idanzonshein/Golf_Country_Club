@@ -6,9 +6,14 @@
   <thead>
     <tr>
         <th>User Name</th>
+        <th>Age</th>
+        <th>Skill Level</th>
         <th>Date</th>
         <th>Score</th>
         <th>Conditions</th>
+        <% if current_user.admin %>
+          <th>admin</th>
+        <% end %>
     </tr>
   </thead>
 
@@ -16,9 +21,15 @@
     <% @course.visits.each do |visit| %>
       <tr>
         <td><%= visit.user.name %></td>
+        <td><%= visit.user.age %></td>
+        <td><%= visit.user.skill_level %></td>
         <td><%= visit.date %></td>
         <td><%= visit.score %></td>
         <td><%= visit.conditions %></td>
+        <% if current_user.admin %>
+          <td><%= link_to "delete", course_visit_path(@course, visit), method: :delete, data: {confirm: "Are you sure you want to delete this hole?"} %></td>
+        <% end %>
+
       </tr>
     <% end %>
   </tbody>

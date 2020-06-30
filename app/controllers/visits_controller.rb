@@ -20,6 +20,12 @@ class VisitsController < ApplicationController
     redirect_to course_visits_path(@course)
   end
 
+  def destroy
+    @visit = Visit.find(params[:id])
+    @visit.destroy
+    render :index
+  end
+
 private
 
   def visit_params
