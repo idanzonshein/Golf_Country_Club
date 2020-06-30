@@ -3,11 +3,10 @@
 <table>
   <thead>
     <tr>
-        <th>User</th>
+        <th>User Name</th>
         <th>Date</th>
         <th>Score</th>
         <th>Conditions</th>
-        <th colspan= "4"></th>
     </tr>
   </thead>
 
@@ -27,4 +26,6 @@
 <br>
 <br>
 <br>
-<%= link_to 'Log Your Visit', new_course_visit_path(@course) %>
+<h3><strong><%= link_to 'Log Your Visit', new_course_visit_path(@course) %></strong></h3><br><br>
+
+<%= link_to 'Return to Course', course_path(@course) %>
