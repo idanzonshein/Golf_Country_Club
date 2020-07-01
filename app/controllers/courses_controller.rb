@@ -10,8 +10,14 @@ class CoursesController < ApplicationController
   end
 
   def create
-    @course = Course.create(course_params)
-    redirect_to courses_path
+    @course = Course.new(course_params)
+    if @course.valid?
+      @course.save
+      redirect_to courses_path
+    else
+      flash.now[:messages] = @course.errors.full_messages
+      render :new
+    end
   end
 
   def show; end

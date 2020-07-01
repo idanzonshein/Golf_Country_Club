@@ -11,8 +11,16 @@
 
   <body>
 
-    <h3><%= render 'layouts/session_buttons' %></h3>
+  <h3><%= render 'layouts/session_buttons' %></h3>
     <%= render 'layouts/alerts' %>
+
+    <div>
+      <% if flash[:messages] %>
+        <% flash[:messages].each do |message| %>
+          <strong><h3><%= message%></h3></strong>
+        <% end %>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
