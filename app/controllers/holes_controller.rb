@@ -14,8 +14,14 @@ class HolesController < ApplicationController
   end
 
   def create
-    @course.holes.create(hole_params)
-    redirect_to course_path(@course)
+    @hole = @course.holes.create(hole_params)
+    if @hole.valid?
+      @hole.save
+      redirect_to course_path(@course)
+    else
+      flash.now[:messages] = @hole.errors.full_messages
+      render :new
+    end
   end
 
   def edit
@@ -24,8 +30,12 @@ class HolesController < ApplicationController
 
   def update
     @hole = Hole.find(params[:id])
-    @hole.update(hole_params)
-    redirect_to course_holes_path(@course)
+    if @hole.update(hole_params)
+      redirect_to course_holes_path(@course)
+    else
+      flash.now[:messages] = @hole.errors.full_messages
+      render :edit
+    end
   end
 
   def destroy

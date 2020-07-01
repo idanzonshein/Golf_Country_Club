@@ -25,8 +25,12 @@ class CoursesController < ApplicationController
   def edit; end
 
   def update
-    @course.update(course_params)
-    redirect_to course_path(@course)
+    if @course.update(course_params)
+      redirect_to course_path(@course)
+    else
+      flash.now[:messages] = @course.errors.full_messages
+      render :edit
+    end
   end
 
 private

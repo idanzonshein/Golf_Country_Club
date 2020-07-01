@@ -16,8 +16,13 @@ class VisitsController < ApplicationController
   def create
     @visit = @course.visits.create(visit_params)
     @visit.user = current_user
-    @visit.save
-    redirect_to course_visits_path(@course)
+    if @visit.valid?
+      @visit.save
+      redirect_to course_visits_path(@course)
+    else
+      flash.now[:messages] = @visit.errors.full_messages
+      render :new
+    end
   end
 
   def destroy
