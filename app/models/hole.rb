@@ -1,6 +1,6 @@
 class Hole < ApplicationRecord
   belongs_to :course
-  # validates
+  validates :hole_number, :distance, :par_score, presence: true
   validates :hole_number,
             uniqueness: { scope: :course_id,
                           message: "A basket number must be unique." }
