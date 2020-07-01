@@ -7,12 +7,21 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <div class="header">
+  <%=link_to (image_tag ("/assets/golf_ball.png"), class: "img-responsive"), root_path%>
+    <div class="header-center">
+      <%= "Golf Course Database"%>
+    </div>
+    <div class="header-right">
+        <%= render 'layouts/session_buttons' %>
+      </div>
+    </div>
+  </div>
   </head>
 
   <body>
-
-  <h3><%= render 'layouts/session_buttons' %></h3>
-    <%= render 'layouts/alerts' %>
+    <a><%= render 'layouts/alerts' %></a>
 
     <div>
       <% if flash[:messages] %>
