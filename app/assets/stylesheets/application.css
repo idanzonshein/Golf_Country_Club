@@ -14,15 +14,17 @@
  *= require_self
  */
 
- body {
-  /* background-image: url(/assets/background.jpg); */
-  background-color: #6dbf78;
-  color: black;
-  font-size: larger
-  }
+body {
+/* background-image: url(/assets/background.jpg); */
+background-color: #6dbf78;
+color: black;
+font-size: larger;
+float: none;
+}
 
 a:visited {
   color: blue;
+
 }
 
 table {
@@ -72,6 +74,55 @@ text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0
 .field_with_errors {
   display: inline;
   color: red;
+}
+
+.header {
+  overflow: hidden;
+  background-color: whitesmoke;
+  padding: 18px 10px;
+  color: black;
+}
+
+.header-right {
+  text-align: right;
+}
+
+.img-responsive {
+  width:70px;
+  height:80px;
+}
+
+.header-center {
+  text-align: center;
+  font-size: 50px;
+  margin-top: -50px;
+}
+
+.header_buttons a:visited {
+  color: white;
+;
+}
+.header_buttons {
+  font-size: 40px;
+  float: right;
+  margin-top: -80px;
+}
+
+.header_buttons a{
+  background-color: black;
+  text-decoration: none;
+}
+
+.field {
+  text-align: center;
+}
+
+.actions {
+  text-align: center;
+}
+
+body a{
+  text-align: center;
 }
 
 
