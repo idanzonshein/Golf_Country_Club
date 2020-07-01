@@ -6,11 +6,6 @@ RSpec.describe Hole, type: :model do
       expect(build :hole, hole_number: nil).to be_invalid
     end
 
-    it "without a unique hole number" do
-      create :hole
-      expect(build :hole).to be_invalid
-    end
-
     it "without a distance" do
       expect(build :hole, distance: nil).to be_invalid
     end

@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :visits do
+  factory :visit do
     user
     course
     date_time { "07/01/2020" }
