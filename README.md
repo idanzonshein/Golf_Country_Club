@@ -1,24 +1,36 @@
-# README
+# Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Golf Course Database Application
 
-Things you may want to cover:
+## Overview
+  This app is a one stop shop for all your golf course questions. Once registered and signed in, you will have access to the top golf courses around the country. This includes basic information as well as hole and par descriptions. Further more, once you play at the course, log your visit and compare with other users around the world!
 
-* Ruby version
+## Install Guide
 
-* System dependencies
+### Clone the repository
 
-* Configuration
+```shell
+git clone git@github.com:idanzonshein/Golf_Country_Club.git
+cd Golf_Country_Club
+```
 
-* Database creation
 
-* Database initialization
+### Install dependencies
 
-* How to run the test suite
+Using [Bundler](https://github.com/bundler/bundler)
 
-* Services (job queues, cache servers, search engines, etc.)
+```shell
+bundle install
+```
 
-* Deployment instructions
+### Initialize the database
 
-* ...
+```shell
+rails db:migrate
+```
+
+## Start a local server
+
+```shell
+rails s
+```
