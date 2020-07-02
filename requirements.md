@@ -17,11 +17,11 @@ Requirements:
 - [x] Includes Unit tests all of your models
 - [x] Includes at least one type of Integration test (e.g. controller, request, feature, system)
 - [x] Use FactoryBot to build instances of your models in your tests
-- [ ] Conforms to Nitro Ruby linting rules (running `rubocop` returns 0 offenses)
-- [ ] Includes a `README.md` with an application description and installation guide
+- [x] Conforms to Nitro Ruby linting rules (running `rubocop` returns 0 offenses)
+- [x] Includes a `README.md` with an application description and installation guide
 
 Confirm:
-- [ ] The application is pretty DRY
+- [x] The application is pretty DRY
 - [x] Limited logic in controllers
 - [x] Views use helper methods if appropriate
 - [x] Views use partials if appropriate

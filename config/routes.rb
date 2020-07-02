@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :courses do
     resources :holes
-    resources :visits
+    resources :visits, except: [:update, :edit]
   end
 
   devise_for :users
