@@ -4,7 +4,6 @@ class Visit < ApplicationRecord
 
   validates :score, :date_time, :conditions, presence: true
 
-
   def date
     date_time.strftime("%m/%d/%Y")
   end
